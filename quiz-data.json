@@ -1,0 +1,134 @@
+{
+  "quizzes": [
+    {
+      "id": "social_studies",
+      "title": "Global Civilizations & History",
+      "description": "Embark on a journey through time to explore the landmarks, leaders, and events that shaped our modern world.",
+     "voiceover_start": "assets/audio/science-intro.mp3",
+      "voiceover_end": "assets/audio/science-end.mp3",
+      "image": "assets/science-hero.jpg",
+      "questions": [
+        {
+          "question": "Which ancient civilization built the Great Pyramids of Giza?",
+          "options": ["Romans", "Mayans", "Egyptians", "Greeks"],
+          "correctIndex": 2,
+          "explanation": "The Egyptians built the pyramids as tombs for their pharaohs during the Old and Middle Kingdom periods.",
+          "image": "assets/mars.jpg"
+        },
+        {
+          "question": "Which is the smallest continent by land area?",
+          "options": ["Europe", "Australia", "Antarctica", "South America"],
+          "correctIndex": 1,
+          "explanation": "Australia is the world's smallest continent and is also known as the 'island continent' because it is surrounded by water.",
+          "image": "assets/mars.jpg"
+        },
+        {
+          "question": "Who is known for the famous 'I Have a Dream' speech?",
+          "options": ["Abraham Lincoln", "Nelson Mandela", "Martin Luther King Jr.", "Mahatma Gandhi"],
+          "correctIndex": 2,
+          "explanation": "Dr. Martin Luther King Jr. delivered this historic speech in 1963, calling for an end to racism and civil rights for all.",
+          "image": "assets/mars.jpg"
+        },
+        {
+          "question": "Which ocean is the largest on Earth?",
+          "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+          "correctIndex": 3,
+          "explanation": "The Pacific Ocean covers more than 30% of the Earth's surface, making it larger than all of Earth's landmasses combined.",
+          "image": "assets/mars.jpg"
+        },
+        {
+          "question": "In which country did the Industrial Revolution begin?",
+          "options": ["USA", "France", "Great Britain", "Germany"],
+          "correctIndex": 2,
+          "explanation": "The Industrial Revolution started in Great Britain in the 18th century before spreading to the rest of the world.",
+          "image": "assets/mars.jpg"
+        }
+      ]
+    },
+    {
+      "id": "science",
+      "title": "General Science Mastery",
+      "description": "Explore the wonders of the physical world. This mission tests your fundamental scientific knowledge.",
+      "voiceover_start": "assets/audio/science-intro.mp3",
+      "voiceover_end": "assets/audio/science-end.mp3",
+      "image": "assets/science-hero.jpg",
+      "questions": [
+        {
+          "question": "Which planet is known as the Red Planet?",
+          "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+          "correctIndex": 2,
+          "explanation": "Mars appears red due to iron oxide (rust) on its surface, which gives it a reddish appearance in the night sky.",
+          "image": "assets/mars.jpg"
+        },
+        {
+          "question": "Which planet is known as the Red Planet?",
+          "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+          "correctIndex": 3,
+          "explanation": "Mars appears red due to iron oxide (rust) on its surface, which gives it a reddish appearance in the night sky.",
+          "image": "assets/mars.jpg"
+        },
+        {
+          "question": "Which planet is known as the Red Planet?",
+          "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+          "correctIndex": 1,
+          "explanation": "Mars appears red due to iron oxide (rust) on its surface, which gives it a reddish appearance in the night sky.",
+          "image": "assets/mars.jpg"
+        },
+        {
+          "question": "Which planet is known as the Red Planet?",
+          "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+          "correctIndex": 2,
+          "explanation": "Mars appears red due to iron oxide (rust) on its surface, which gives it a reddish appearance in the night sky.",
+          "image": "assets/mars.jpg"
+        }
+      ]
+    },
+
+{
+      "id": "biology",
+      "title": "Biological Sciences Mission",
+      "description": "Unlock the secrets of life, from the microscopic world of cells to the complex systems of the human body.",
+      "voiceover_start": "assets/audio/science-intro.mp3",
+      "voiceover_end": "assets/audio/science-end.mp3",
+      "image": "assets/mars.jpg",
+      "questions": [
+        {
+          "question": "What is considered the 'Powerhouse' of the cell?",
+          "options": ["Nucleus", "Mitochondria", "Ribosome", "Vacuole"],
+          "correctIndex": 1,
+          "explanation": "Mitochondria generate most of the cell's supply.",
+          "image": "assets/mars.jpg"
+        },
+        {
+          "question": "Which pigment gives leaves their green color?",
+          "options": ["Carotene", "Hemoglobin", "Chlorophyll", "Melanin"],
+          "correctIndex": 2,
+          "explanation": "Chlorophyll is a pigment found in chloroplasts that absorbs light energy for photosynthesis, reflecting green light.",
+          "image": "assets/mars.jpg"
+        },
+        {
+          "question": "How many chambers are in a human heart?",
+          "options": ["Two", "Three", "Four", "Five"],
+          "correctIndex": 2,
+          "explanation": "The human heart has four chambers: two upper atria and two lower ventricles to keep oxygenated and deoxygenated blood separate.",
+          "image": "assets/mars.jpg"
+        },
+        {
+          "question": "Which molecule carries genetic information?",
+          "options": ["Protein", "Lipid", "DNA", "Glucose"],
+          "correctIndex": 2,
+          "explanation": "DNA (Deoxyribonucleic acid) contains the instructions an organism needs to develop, live, and reproduce.",
+          "image": "assets/mars.jpg"
+        },
+        {
+          "question": "What is the largest organ in the human body?",
+          "options": ["Liver", "Skin", "Brain", "Lungs"],
+          "correctIndex": 1,
+          "explanation": "By surface area and weight, the skin is the largest organ, acting as a primary barrier against the environment.",
+          "image": "assets/mars.jpg"
+        }
+      ]
+    }
+  
+  ]
+}

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Movie Review Rate Maker</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        :root {
+            --bg-dark: #0f0c29;
+            --accent: #00d2ff;
+            --correct: #2ecc71;
+            --text-main: #ffffff;
+            --font-q: 4.2vh;
+            --font-opt: 3.1vh;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: #000;
+            color: var(--text-main);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .bg-layer {
+            position: fixed;
+            inset: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(45deg, #220fc9, #63462b, #243e26);
+            z-index: -1;
+            animation: moveBg 20s ease-in-out infinite alternate;
+            filter: blur(20px) brightness(0.6);
+        }
+
+        @keyframes moveBg {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-40%);
+            }
+        }
+
+        .screen {
+            position: fixed;
+            inset: 0;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #c81111cf, #094d11, #06175b);
+            z-index: 10;
+            padding: 5vh 5vw;
+        }
+
+        #screen-result h2 {
+            font-size: 6vh;
+            margin-bottom: 2vh;
+            text-align: center;
+            /* Ensures the text itself is centered */
+            width: 100%;
+            /* Takes full width to allow centering */
+            color: var(--accent);
+        }
+
+        .screen.active {
+            display: flex;
+        }
+
+        /* SELECTION SCREEN */
+        #search-box {
+            width: 80%;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-bottom: 20px;
+            font-size: 2.5vh;
+            outline: none;
+        }
+
+        .quiz-list {
+            width: 80%;
+            max-height: 50vh;
+            overflow-y: auto;
+            display: grid;
+            gap: 15px;
+        }
+
+        .quiz-item {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .quiz-item.selected {
+            border-color: var(--accent);
+            background: rgba(0, 210, 255, 0.3);
+            box-shadow: 0 0 15px var(--accent);
+        }
+
+        /* DETAILS SCREEN */
+        .details-img {
+            width: 100%;
+            height: 40vh;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .details-content {
+            margin-top: 3vh;
+            text-align: center;
+            font-size: 3vh;
+            line-height: 1.5;
+        }
+
+        /* QUIZ HEADER */
+        .header {
+            height: 10vh;
+            padding: 0 5vw;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            align-items: center;
+
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        #progress-fill {
+            width: 0%;
+            height: 100%;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .score-box {
+            text-align: right;
+            font-size: 2.5vh;
+            font-weight: 800;
+        }
+
+        /* QUIZ MAIN & TRANSITIONS */
+        .main-container {
+            height: 82vh;
+            display: flex;
+            flex-direction: column;
+            padding: 4vh 5vw;
+            gap: 3vh;
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+        }
+
+        .main-container.exit-left {
+            transform: translateX(-100vw) scale(0.9) rotate(-10deg);
+            opacity: 0;
+        }
+
+        .main-container.enter-right {
+            transform: translateX(100vw) scale(0.9) rotate(10deg);
+            opacity: 0;
+            transition: none;
+        }
+
+        /* 3D FLIP CARD */
+        .flip-container {
+            flex: 1;
+            perspective: 1200px;
+            width: 100%;
+        }
+
+        .flip-card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .flip-card.is-flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card-back {
+            background: linear-gradient(45deg, #86868a, #4d4c4e, #243e26);
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .question-text {
+            font-size: var(--font-q);
+            background: #100662;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 700;
+            opacity: 0;
+            filter: blur(10px);
+            transition: 0.8s;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            padding: 5px;
+        }
+
+        .question-text.reveal {
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2vh;
+        }
+
+        .option-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            padding: 2.5vh;
+            border-radius: 15px;
+            font-size: var(--font-opt);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.4s;
+        }
+
+        .option-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .option-card.correct {
+            background: #36680abb;
+            border-color: #fff;
+            animation: pulse 0.5s infinite alternate;
+        }
+
+        /* DESKTOP / LANDSCAPE LAYOUT (Wider than 600px) */
+        @media (min-width: 601px) {
+            .main-container {
+                display: grid !important;
+                /* Overrides flex */
+                grid-template-columns: 1fr 1fr;
+                /* Flip-card left, options right */
+                grid-template-rows: auto 1fr;
+                /* Row 1: Question, Row 2: Content */
+                gap: 3vh 5vw;
+                align-items: center;
+                padding: 2vh 5vw;
+            }
+
+            #question-text {
+                grid-column: 1 / span 2;
+                /* Question spans both columns at top */
+                margin-bottom: 2vh;
+                font-size: 4.5vh;
+                min-height: 16vh;
+            }
+
+            .flip-container {
+                grid-column: 1;
+                /* Left side */
+                grid-row: 2;
+                height: 55vh;
+                margin: 0;
+            }
+
+            .options-grid {
+                grid-column: 2;
+                grid-row: 2;
+                display: flex !important;
+                /* Use Flexbox for vertical distribution */
+                flex-direction: column;
+                /* Stack options vertically */
+                justify-content: space-between;
+                /* First at top, last at bottom */
+                height: 55vh;
+                /* Take full height of the container */
+                margin: 0;
+            }
+
+            .option-card {
+                width: 100%;
+                /* Ensure buttons take full width of the column */
+                margin: 0;
+                /* Remove default margins to allow flex spacing */
+                text-align: center;
+            }
+        }
+
+        .timer-strip {
+            position: fixed;
+            bottom: 20px;
+            left: 5%;
+            height: 1.5vh;
+            background: var(--accent);
+            width: 90%;
+            transform-origin: left;
+            transform: scaleX(0);
+            border-radius: 10px;
+            z-index: 20;
+            box-shadow: 0 0 15px var(--accent);
+            justify-content: center;
+        }
+
+        @keyframes pulse {
+            from {
+                box-shadow: 0 0 10px var(--correct);
+            }
+
+            to {
+                box-shadow: 0 0 30px var(--correct);
+            }
+        }
+
+        /* NEW: Score Badge Animation */
+        .score-popup {
+            position: absolute;
+            right: 15px;
+            color: var(--correct);
+            font-size: 3vh;
+            font-weight: bold;
+            animation: fadeUp 2.5s forwards;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+        }
+
+        #star-rating {
+            font-size: 8vh;
+            margin: 2vh 0;
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            color: #FFD700;
+            /* Bright gold for stars */
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+
+        .star {
+            position: relative;
+            display: inline-block;
+            color: #444;
+            /* Color for empty part */
+        }
+
+        .star::before {
+            content: "★";
+        }
+
+        .star-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            color: #FFD700;
+            /* Bright gold for filled part */
+            width: 0%;
+            /* This will be controlled by JS */
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+
+        .star-fill::before {
+            content: "★";
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log("Service Worker Registered"));
+    }
+  </script>
+    <div class="bg-layer"></div>
+
+    <div id="screen-select" class="screen active">
+        <h1 style="font-size: 6vh; margin-bottom: 4vh;">SELECT MISSION</h1>
+        <input type="text" id="search-box" placeholder="Search missions..." onkeyup="ctrl.filter()">
+        <div class="quiz-list" id="quiz-list-container"></div>
+        <button
+            style="padding: 2vh 10vw; background: var(--accent); border: none; border-radius: 50px; color: #000; margin-top: 5vh; font-size: 3vh; cursor: pointer; font-weight: bold;"
+            onclick="ctrl.toDetails()">START MISSION</button>
+    </div>
+
+    <div id="screen-details" class="screen">
+        <img id="det-img" class="details-img" src="">
+        <div class="details-content">
+            <h2 id="det-title" style="color: var(--accent); font-size: 5vh; margin-bottom: 2vh;"></h2>
+            <p id="det-desc"></p>
+        </div>
+    </div>
+
+    <section id="screen-quiz" class="screen" style="background: transparent; padding:0; justify-content: flex-start;">
+        <header class="header" style="width:100%">
+            <div id="q-number" style="font-weight: bold;">Q1/10</div>
+            <div class="progress-container">
+                <div id="progress-fill"></div>
+            </div>
+            <div class="score-box">
+                RR: <span id="score-val">0.0</span>
+                <div id="score-popup-container"></div>
+            </div>
+
+        </header>
+        <main class="main-container" id="quiz-main-container" style="width:100%">
+
+            <div id="question-text" class="question-text"></div>
+
+            <div class="flip-container">
+                <div id="flip-card" class="flip-card">
+                    <div class="card-face card-front">
+                        <img id="q-img" style="width: 100%; height: 100%; object-fit: cover;" src="">
+                    </div>
+                    <div class="card-face card-back">
+
+                        <p id="q-desc" style="font-size: 3.2vh; line-height: 1.4;"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="opt-grid" class="options-grid"></div>
+        </main>
+        <div id="timer-bar" class="timer-strip"></div>
+    </section>
+
+    <div id="screen-result" class="screen">
+        <img id="final-img" class="details-img" style="width: 50%; height: 30vh; margin-bottom: 3vh;">
+        <h2 style="font-size: 6vh; margin-bottom: 2vh;">MISSION COMPLETE</h2>
+        <div id="star-rating" style="font-size: 8vh; margin: 1vh 0; color: gold;"></div>
+        <p style="font-size: 4vh;">Final Rating: <span id="final-score">0.0</span> / 5.0</p>
+        <!-- <button
+            style="margin-top: 4vh; padding: 2vh 8vw; background: var(--accent); border: none; color: #000; font-weight:bold; border-radius: 50px; cursor: pointer;"
+            onclick="location.reload()">RESTART</button> -->
+    </div>
+
+    <audio id="audio-bgm" loop></audio>
+    <audio id="audio-voice"></audio>
+    <audio id="snd-tick" src="assets/ticker.mp3"></audio>
+    <audio id="snd-win" src="assets/win.mp3"></audio>
+    <audio id="snd-swipe" src="assets/swipe.mp3"></audio>
+
+    <script>
+        const ctrl = {
+            db: [], quiz: null, idx: 0, score: 0, lastRunningScore: 0, nextQTimer: null, isFinished: false,
+
+            async init() {
+                const res = await fetch('quiz-data.json');
+                const data = await res.json();
+                this.db = data.quizzes;
+                this.render(this.db);
+            },
+
+            render(list) {
+                const con = document.getElementById('quiz-list-container');
+                con.innerHTML = '';
+                list.forEach(q => {
+                    const d = document.createElement('div');
+                    d.className = 'quiz-item';
+                    d.innerHTML = `<h3>${q.title}</h3><p>${q.questions.length} Questions</p>`;
+                    d.onclick = () => {
+                        document.querySelectorAll('.quiz-item').forEach(c => c.classList.remove('selected'));
+                        d.classList.add('selected');
+                        this.quiz = q;
+                    };
+                    con.appendChild(d);
+                });
+            },
+
+            filter() {
+                const val = document.getElementById('search-box').value.toLowerCase();
+                this.render(this.db.filter(q => q.title.toLowerCase().includes(val)));
+            },
+
+            toDetails() {
+                if (!this.quiz) return alert("Select a mission!");
+                this.switch('screen-details');
+                document.getElementById('det-img').src = this.quiz.image;
+                document.getElementById('det-title').innerText = this.quiz.title;
+                document.getElementById('det-desc').innerText = this.quiz.description;
+
+                const v = document.getElementById('audio-voice');
+                v.src = this.quiz.voiceover_start;
+                v.play().catch(() => setTimeout(() => this.toQuiz(), 5000));
+                v.onended = () => this.toQuiz();
+            },
+
+            toQuiz() {
+                if (this.isFinished) return;
+                this.switch('screen-quiz');
+                const bgm = document.getElementById('audio-bgm');
+                bgm.src = "assets/bgm.mp3";
+                bgm.volume = 0; bgm.play();
+                this.fade(bgm, 1500, 'in');
+                this.loadQ();
+            },
+
+            async loadQ() {
+                if (this.isFinished || this.idx >= this.quiz.questions.length) return;
+
+                const main = document.getElementById('quiz-main-container');
+                const q = this.quiz.questions[this.idx];
+                const qImg = document.getElementById('q-img');
+                const qTxt = document.getElementById('question-text');
+                const grid = document.getElementById('opt-grid');
+                const flip = document.getElementById('flip-card');
+                // Play swipe sound for entry
+                const swipeSnd = document.getElementById('snd-swipe');
+                swipeSnd.currentTime = 0;
+                swipeSnd.play().catch(e => { });
+
+                // Enter Right Animation
+                main.classList.add('enter-right');
+                main.classList.remove('exit-left');
+                flip.classList.remove('is-flipped');
+
+                qTxt.classList.remove('reveal');
+                grid.innerHTML = '';
+                document.getElementById('q-number').innerText = `Q${this.idx + 1}/${this.quiz.questions.length}`;
+                document.getElementById('progress-fill').style.width = `${(this.idx / this.quiz.questions.length) * 100}%`;
+                qImg.src = q.image;
+
+                setTimeout(() => main.classList.remove('enter-right'), 50);
+
+                // Image only phase
+                await new Promise(r => setTimeout(r, 3000));
+                if (this.isFinished) return;
+
+                // Text + Options phase
+                qTxt.innerText = q.question;
+                qTxt.classList.add('reveal');
+                q.options.forEach((o, i) => {
+                    const b = document.createElement('div');
+                    b.className = 'option-card'; b.innerText = o;
+                    grid.appendChild(b);
+                    setTimeout(() => b.classList.add('show'), i * 150);
+                });
+
+                await new Promise(r => setTimeout(r, 2000));
+                if (this.isFinished) return;
+
+                this.timer(q);
+            },
+
+            timer(q) {
+                const bar = document.getElementById('timer-bar');
+                bar.style.transition = 'none'; bar.style.transform = 'scaleX(1)';
+                bar.offsetHeight;
+                bar.style.transition = 'transform 7s linear';
+                bar.style.transform = 'scaleX(0)';
+                document.getElementById('snd-tick').play();
+                this.nextQTimer = setTimeout(() => this.reveal(q), 7000);
+            },
+
+            reveal(q) {
+                if (this.isFinished) return;
+                const opts = document.querySelectorAll('.option-card');
+                if (opts[q.correctIndex]) opts[q.correctIndex].classList.add('correct');
+
+                // 1. Calculate Score (Index-based weight)
+                this.score += q.correctIndex;
+
+                // 2. 5.0 Scale Calculation
+                const possibleSoFar = (this.idx + 1) * 3;
+                const currentRunning = (this.score / possibleSoFar) * 5;
+                const diff = currentRunning - this.lastRunningScore;
+
+                // 3. Update Main Display
+                document.getElementById('score-val').innerText = currentRunning.toFixed(1);
+
+                // 4. Trigger Floating Badge
+                const container = document.getElementById('score-popup-container');
+                const popup = document.createElement('div');
+                popup.className = "score-popup";
+                popup.style.color = diff >= 0 ? "var(--correct)" : "#ef4444";
+                popup.innerText = (diff >= 0 ? "+" : "") + diff.toFixed(1);
+                container.appendChild(popup);
+
+                // Cleanup and track last score
+                setTimeout(() => popup.remove(), 1500);
+                this.lastRunningScore = currentRunning;
+
+                document.getElementById('snd-win').play();
+                const flip = document.getElementById('flip-card');
+                const qDesc = document.getElementById('q-desc');
+                // Set the text and trigger the flip
+                qDesc.innerText = q.explanation || "Analysis Complete.";
+                flip.classList.add('is-flipped');
+                this.nextQTimer = setTimeout(() => {
+                    // Play swipe sound for exit
+                    const swipeSnd = document.getElementById('snd-swipe');
+                    swipeSnd.currentTime = 0;
+                    swipeSnd.play().catch(e => { });
+                    document.getElementById('quiz-main-container').classList.add('exit-left');
+                    setTimeout(() => {
+                        this.idx++;
+                        if (this.idx >= this.quiz.questions.length) this.toResult();
+                        else this.loadQ();
+                    }, 700);
+                }, 4000); // 4 seconds to read the flipped analysis
+            },
+
+            toResult() {
+                if (this.isFinished) return;
+                this.isFinished = true;
+                clearTimeout(this.nextQTimer);
+
+                const bgm = document.getElementById('audio-bgm');
+                this.fade(bgm, 2000, 'out', () => {
+                    this.switch('screen-result');
+
+                    // 1. Set the final mission image
+                    document.getElementById('final-img').src = this.quiz.image;
+
+                    // NEW: Update the <h2> to show the topic title
+                    document.querySelector('#screen-result h2').innerText = this.quiz.title;
+
+                    // 2. Calculate final rating on 5.0 scale
+                    const finalRating = (this.score / (this.quiz.questions.length * 3)) * 5;
+                    document.getElementById('final-score').innerText = finalRating.toFixed(1);
+
+                    // 3. Generate Stars (Corrected variable names)
+                    const starContainer = document.getElementById('star-rating');
+                    starContainer.innerHTML = ''; // Clear previous text stars
+
+                    for (let i = 1; i <= 5; i++) {
+                        const starWrap = document.createElement('div');
+                        starWrap.className = 'star';
+
+                        const starFill = document.createElement('div');
+                        starFill.className = 'star-fill';
+
+                        // Calculate fill percentage for this specific star
+                        // If finalRating is 4.2: stars 1-4 get 100%, star 5 gets 20%, others 0%
+                        let fillPercent = 0;
+                        if (finalRating >= i) {
+                            fillPercent = 100;
+                        } else if (finalRating > i - 1) {
+                            fillPercent = (finalRating - (i - 1)) * 100;
+                        }
+
+                        starFill.style.width = fillPercent + "%";
+
+                        starWrap.appendChild(starFill);
+                        starContainer.appendChild(starWrap);
+                    }
+
+                    // 4. Play Ending Voiceover
+                    const ev = document.getElementById('audio-voice');
+                    ev.src = this.quiz.voiceover_end;
+                    ev.play();
+                });
+            },
+
+            switch(id) {
+                document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+                document.getElementById(id).classList.add('active');
+            },
+
+            fade(a, d, type, cb) {
+                let vol = type === 'in' ? 0 : 1;
+                const step = 0.05, gap = d / (1 / step);
+                const t = setInterval(() => {
+                    vol = type === 'in' ? vol + step : vol - step;
+                    a.volume = Math.min(Math.max(vol, 0), 1);
+                    if ((type === 'in' && vol >= 1) || (type === 'out' && vol <= 0)) {
+                        clearInterval(t);
+                        if (cb) cb();
+                    }
+                }, gap);
+            }
+        };
+
+        window.onload = () => ctrl.init();
+    </script>
+</body>
+
+</html>
