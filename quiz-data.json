@@ -62,7 +62,8 @@
           "voiceover": "assets/audio/q7.mp3",
           "options": ["Dull", "Average", "Good", "Outstanding"],
           "correctIndex": 3,
-          "explanation": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773295043_5.jpg"
+          "explanation": "Good",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773295043_4.jpeg"
         },
         {
           "question": "HOW IS THE EMOTIONAL CONNECT?",
