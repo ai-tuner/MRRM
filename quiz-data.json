@@ -1,5 +1,401 @@
 {
   "quizzes": [
+    
+    {
+      "id": "dhurandhar2_review",
+      "title": "Dhurandhar 2 Movie Review",
+      "description": "A comprehensive review of Dhurandhar 2, covering story, performances, action, music, and overall cinematic experience.",
+      "voiceover_start": "assets/audio/dhurandhar-intro-voice.mp3",
+      "voiceover_end": "assets/audio/outro.mp3",
+      "image": "https://wallpaperaccess.com/full/23892125.jpg",
+      "questions": [
+        {
+          "question": "HOW IS THE STORY OF DHURANDHAR 2?",
+          "voiceover": "assets/audio/intro.mp3",
+          "options": ["Weak", "Routine", "Engaging", "Gripping & Intense"],
+          "correctIndex": 3,
+          "explanation": "A high-stakes espionage story involving undercover operations and geopolitical conflict.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773730416_0.jpg"
+        },
+        {
+          "question": "HOW IS THE SCREENPLAY & PACING?",
+          "voiceover": "assets/audio/q2.mp3",
+          "options": ["Slow", "Uneven", "Decent", "Gripping"],
+          "correctIndex": 2,
+          "explanation": "Engaging overall but slightly stretched in some parts.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773295042_0.jpg"
+        },
+        {
+          "question": "HOW IS RANVEER SINGH PERFORMANCE?",
+          "voiceover": "assets/audio/q3.mp3",
+          "options": ["Average", "Good", "Very Good", "Outstanding"],
+          "correctIndex": 3,
+          "explanation": "Ranveer Singh delivers a powerful and intense performance.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773295042_0.jpg"
+        },
+        {
+          "question": "HOW ARE THE SUPPORTING CAST PERFORMANCES?",
+          "voiceover": "assets/audio/q4.mp3",
+          "options": ["Weak", "Decent", "Good", "Excellent"],
+          "correctIndex": 3,
+          "explanation": "Actors like Sanjay Dutt and R Madhavan add strong presence.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773295043_2.jpg"
+        },
+        {
+          "question": "HOW ARE THE ACTION SEQUENCES?",
+          "voiceover": "assets/audio/q5.mp3",
+          "options": ["Average", "Good", "Stylish", "High-Octane"],
+          "correctIndex": 3,
+          "explanation": "Top-tier action with large-scale sequences and realistic combat.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773295043_3.jpg"
+        },
+        {
+          "question": "HOW IS THE MUSIC & BGM?",
+          "voiceover": "assets/audio/q6.mp3",
+          "options": ["Forgettable", "Average", "Good", "Excellent"],
+          "correctIndex": 3,
+          "explanation": "Background score enhances tension and action.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773295043_4.jpeg"
+        },
+        {
+          "question": "HOW ARE THE VISUALS & CINEMATOGRAPHY?",
+          "voiceover": "assets/audio/q7.mp3",
+          "options": ["Dull", "Average", "Good", "Outstanding"],
+          "correctIndex": 3,
+          "explanation": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773295043_4.jpeg"
+        },
+        {
+          "question": "HOW IS THE EMOTIONAL CONNECT?",
+          "voiceover": "assets/audio/q8.mp3",
+          "options": ["Weak", "Average", "Good", "Strong"],
+          "correctIndex": 2,
+          "explanation": "Emotional depth is present but secondary to action.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773295043_5.jpg"
+        },
+        {
+          "question": "HOW IS THE DIRECTION?",
+          "voiceover": "assets/audio/q9.mp3",
+          "options": ["Average", "Good", "Very Good", "Excellent"],
+          "correctIndex": 3,
+          "explanation": "Aditya Dhar delivers a large-scale, well-crafted action film.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773295043_5.jpg"
+        },
+        {
+          "question": "HOW IS THE CLIMAX?",
+          "voiceover": "assets/audio/q10.mp3",
+          "options": ["Routine", "Good", "Very Good", "Explosive"],
+          "correctIndex": 3,
+          "explanation": "Climax delivers high tension and sets a powerful conclusion.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773295043_5.jpg"
+        },
+        {
+          "question": "HOW IS THE DUBBING QUALITY?",
+          "voiceover": "assets/audio/q11.mp3",
+          "options": ["Poor", "Below Average", "Decent", "Good"],
+          "correctIndex": 1,
+          "explanation": "Some audience feedback suggests inconsistency in dubbing quality.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773295043_5.jpg"
+        },
+        {
+          "question": "OVERALL ENTERTAINMENT VALUE?",
+          "voiceover": "assets/audio/q12.mp3",
+          "options": ["Average", "Good", "Very Good", "Blockbuster"],
+          "correctIndex": 3,
+          "explanation": "A high-scale action entertainer with strong box office impact.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/dhurandhar-the-revenge1773295043_5.jpg"
+        }
+      ]
+    },
+    {
+      "id": "singer_4423_review",
+      "title": "Singer 4423 Sewing Machine Review",
+      "description": "An in-depth review of the Singer 4423 Heavy Duty Sewing Machine, covering build quality, motor power, speed, stitch options, and overall performance.",
+      "voiceover_start": "assets/audio/intro.mp3",
+      "voiceover_end": "assets/audio/outro.mp3",
+      "image": "https://shop.singerindia.com/wp-content/uploads/sites/2/2025/01/singer-hd-4423-1.jpg",
+      "questions": [
+        {
+          "question": "HOW IS THE BUILD QUALITY?",
+          "voiceover": "assets/audio/q1.mp3",
+          "options": ["Very Weak", "Below Average", "Solid", "Industrial Level"],
+          "correctIndex": 2,
+          "explanation": "It has a heavy-duty metal frame which ensures durability and stability.",
+          "image": "https://shop.singerindia.com/wp-content/uploads/sites/2/2025/01/singer-hd-4423-1.jpg"
+        },
+        {
+          "question": "HOW IS THE MOTOR POWER?",
+          "voiceover": "assets/audio/q2.mp3",
+          "options": ["Weak", "Average", "Powerful", "Extreme Industrial"],
+          "correctIndex": 3,
+          "explanation": "The motor is about 60% stronger than standard machines, allowing thick fabric sewing.",
+          "image": "https://shop.singerindia.com/wp-content/uploads/sites/2/2025/01/singer-hd-4423-1.jpg"
+        },
+        {
+          "question": "HOW IS THE SEWING SPEED?",
+          "voiceover": "assets/audio/q3.mp3",
+          "options": ["Slow", "Average", "Fast", "Very Fast"],
+          "correctIndex": 3,
+          "explanation": "It can sew up to ~1100 stitches per minute, faster than most home machines.",
+          "image": "https://shop.singerindia.com/wp-content/uploads/sites/2/2025/01/singer-hd-4423-1.jpg"
+        },
+        {
+          "question": "HOW MANY STITCH OPTIONS?",
+          "voiceover": "assets/audio/q4.mp3",
+          "options": ["Very Limited", "Basic Only", "Decent Variety", "Professional Range"],
+          "correctIndex": 2,
+          "explanation": "It offers 23 built-in stitches including basic, decorative, and stretch stitches.",
+          "image": "https://shop.singerindia.com/wp-content/uploads/sites/2/2025/01/singer-hd-4423-1.jpg"
+        },
+        {
+          "question": "HOW EASY IS IT FOR BEGINNERS?",
+          "voiceover": "assets/audio/q5.mp3",
+          "options": ["Hard", "Learning Curve", "Easy", "Very Beginner Friendly"],
+          "correctIndex": 2,
+          "explanation": "Simple mechanical controls make it beginner-friendly but require practice.",
+          "image": "https://shop.singerindia.com/wp-content/uploads/sites/2/2025/01/singer-hd-4423-1.jpg"
+        },
+        {
+          "question": "HOW DOES IT HANDLE THICK FABRICS?",
+          "voiceover": "assets/audio/q6.mp3",
+          "options": ["Poor", "Average", "Good", "Excellent"],
+          "correctIndex": 3,
+          "explanation": "It handles denim, canvas, and thick materials quite well due to its strong motor.",
+          "image": "https://shop.singerindia.com/wp-content/uploads/sites/2/2025/01/singer-hd-4423-1.jpg"
+        },
+        {
+          "question": "HOW IS THE NOISE & VIBRATION?",
+          "voiceover": "assets/audio/q7.mp3",
+          "options": ["Very Noisy", "Noisy", "Manageable", "Silent"],
+          "correctIndex": 1,
+          "explanation": "Due to high speed and power, it can be noisy during operation.",
+          "image": "https://shop.singerindia.com/wp-content/uploads/sites/2/2025/01/singer-hd-4423-1.jpg"
+        },
+        {
+          "question": "HOW IS THE SPEED CONTROL?",
+          "voiceover": "assets/audio/q8.mp3",
+          "options": ["Very Poor", "Hard to Control", "Decent", "Excellent"],
+          "correctIndex": 1,
+          "explanation": "Many users report the foot pedal is sensitive and hard to control precisely.",
+          "image": "https://shop.singerindia.com/wp-content/uploads/sites/2/2025/01/singer-hd-4423-1.jpg"
+        },
+        {
+          "question": "HOW IS THE DURABILITY LONG TERM?",
+          "voiceover": "assets/audio/q9.mp3",
+          "options": ["Poor", "Average", "Good", "Excellent"],
+          "correctIndex": 2,
+          "explanation": "Durable for home use but not truly industrial-grade. :contentReference[oaicite:1]{index=1}",
+          "image": "https://shop.singerindia.com/wp-content/uploads/sites/2/2025/01/singer-hd-4423-1.jpg"
+        },
+        {
+          "question": "HOW IS VALUE FOR MONEY?",
+          "voiceover": "assets/audio/q10.mp3",
+          "options": ["Overpriced", "Average", "Good Value", "Best in Class"],
+          "correctIndex": 3,
+          "explanation": "Offers strong performance at an affordable price, making it a great value pick.",
+          "image": "https://shop.singerindia.com/wp-content/uploads/sites/2/2025/01/singer-hd-4423-1.jpg"
+        },
+        {
+          "question": "OVERALL PERFORMANCE?",
+          "voiceover": "assets/audio/q11.mp3",
+          "options": ["Below Average", "Average", "Good", "Excellent"],
+          "correctIndex": 3,
+          "explanation": "A powerful, fast, and reliable machine for most home sewing needs.",
+          "image": "https://shop.singerindia.com/wp-content/uploads/sites/2/2025/01/singer-hd-4423-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": "pushpa_review",
+      "title": "Pushpa: The Rise Movie Review",
+      "description": "Pushpa సినిమా పూర్తి రివ్యూ – కథ, నటన, మ్యూజిక్, యాక్షన్ మరియు మొత్తం అనుభవం.",
+      "voiceover_start": "https://cdn.pixabay.com/download/audio/2022/03/15/audio_intro.mp3",
+      "voiceover_end": "https://cdn.pixabay.com/download/audio/2022/03/15/audio_outro.mp3",
+      "image": "https://upload.wikimedia.org/wikipedia/en/2/2c/Pushpa-_The_Rise_%282021_film%29.jpg",
+      "questions": [
+        {
+          "question": "HOW IS THE STORY OF PUSHPA?",
+          "voiceover": "assets/audio/pushpa_q1.mp3",
+          "options": ["Very Weak", "Below Average", "Average", "Engaging & Unique"],
+          "correctIndex": 3,
+          "explanation": "Pushpa story is rooted in red sandalwood smuggling with a strong rise-of-a-man narrative.",
+          "image": "https://upload.wikimedia.org/wikipedia/en/2/2c/Pushpa-_The_Rise_%282021_film%29.jpg"
+        },
+        {
+          "question": "HOW IS THE SCREENPLAY & PACING?",
+          "voiceover": "assets/audio/pushpa_q2.mp3",
+          "options": ["Slow", "Uneven", "Decent", "Gripping"],
+          "correctIndex": 2,
+          "explanation": "Screenplay is engaging but slightly slow in some portions.",
+          "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728"
+        },
+        {
+          "question": "HOW IS ALLU ARJUN PERFORMANCE?",
+          "voiceover": "assets/audio/pushpa_q3.mp3",
+          "options": ["Average", "Good", "Very Good", "Outstanding"],
+          "correctIndex": 3,
+          "explanation": "Allu Arjun delivers a career-best performance with unique body language and dialogue delivery.",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Allu_Arjun_at_Pushpa_event.jpg"
+        },
+        {
+          "question": "HOW IS RASHMIKA PERFORMANCE?",
+          "voiceover": "assets/audio/pushpa_q4.mp3",
+          "options": ["Poor", "Average", "Good", "Excellent"],
+          "correctIndex": 2,
+          "explanation": "Rashmika performs well within her role limitations.",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Rashmika_Mandanna.jpg"
+        },
+        {
+          "question": "HOW IS FAHAD FAASIL AS VILLAIN?",
+          "voiceover": "assets/audio/pushpa_q5.mp3",
+          "options": ["Weak", "Decent", "Good", "Powerful"],
+          "correctIndex": 3,
+          "explanation": "Fahadh Faasil dominates with a powerful and intense performance.",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Fahadh_Faasil.jpg"
+        },
+        {
+          "question": "HOW ARE THE ACTION SEQUENCES?",
+          "voiceover": "assets/audio/pushpa_q6.mp3",
+          "options": ["Average", "Good", "Stylish", "Massive"],
+          "correctIndex": 3,
+          "explanation": "Action scenes are raw, rustic and impactful.",
+          "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70"
+        },
+        {
+          "question": "HOW IS THE MUSIC & BGM?",
+          "voiceover": "assets/audio/pushpa_q7.mp3",
+          "options": ["Forgettable", "Average", "Good", "Chartbuster"],
+          "correctIndex": 3,
+          "explanation": "Songs like 'Srivalli' and 'Oo Antava' became massive hits.",
+          "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f"
+        },
+        {
+          "question": "HOW ARE THE VISUALS & CINEMATOGRAPHY?",
+          "voiceover": "assets/audio/pushpa_q8.mp3",
+          "options": ["Dull", "Average", "Good", "Excellent"],
+          "correctIndex": 3,
+          "explanation": "Visuals beautifully capture forest terrain and rustic tone.",
+          "image": "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc"
+        },
+        {
+          "question": "HOW IS THE EMOTIONAL CONNECT?",
+          "voiceover": "assets/audio/pushpa_q9.mp3",
+          "options": ["Weak", "Average", "Good", "Strong"],
+          "correctIndex": 2,
+          "explanation": "Emotional moments connect well, especially Pushpa’s journey.",
+          "image": "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a"
+        },
+        {
+          "question": "HOW IS THE CLIMAX?",
+          "voiceover": "assets/audio/pushpa_q10.mp3",
+          "options": ["Average", "Good", "Very Good", "Powerful"],
+          "correctIndex": 3,
+          "explanation": "Climax sets up Pushpa 2 with a strong impact.",
+          "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+        },
+        {
+          "question": "OVERALL ENTERTAINMENT VALUE?",
+          "voiceover": "assets/audio/pushpa_q11.mp3",
+          "options": ["Below Average", "Average", "Good", "Highly Entertaining"],
+          "correctIndex": 3,
+          "explanation": "Pushpa delivers a highly engaging mass entertainment experience.",
+          "image": "https://images.unsplash.com/photo-1478720568477-152d9b164e26"
+        }
+      ]
+    },
+    {
+      "id": "biker_movie_review",
+      "title": "Biker Telugu Movie Review",
+      "description": "A complete cinematic breakdown of Biker – analyzing story, performances, music, visuals, and overall impact.",
+      "voiceover_start": "assets/audio/intro.mp3",
+      "voiceover_end": "https://example.com/audio/biker-outro.mp3",
+      "image": "https://images.filmibeat.com/webp/ph-big/2026/04/biker1775038989_0.jpeg",
+      "questions": [
+        {
+          "question": "HOW IS THE STORY OF BIKER?",
+          "options": ["Very Weak", "Below Average", "Average", "Engaging & Fresh"],
+          "correctIndex": 2,
+          "explanation": "The story has a routine biker-action setup but tries to add emotional depth. However, predictability reduces its impact.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/04/biker1775038989_1.jpeg"
+        },
+        {
+          "question": "HOW IS THE SCREENPLAY & PACING?",
+          "options": ["Very Slow", "Uneven", "Decent", "Gripping"],
+          "correctIndex": 1,
+          "explanation": "The screenplay struggles with pacing, especially in the first half, making some portions feel stretched.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/biker1774267040_0.jpeg"
+        },
+        {
+          "question": "HOW IS THE HERO PERFORMANCE?",
+          "options": ["Poor", "Okay", "Good", "Outstanding"],
+          "correctIndex": 2,
+          "explanation": "The lead actor delivers a solid performance with good screen presence, especially in action sequences.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/biker1773835152_1.jpeg"
+        },
+        {
+          "question": "HOW IS THE VILLAIN CHARACTER?",
+          "options": ["Forgettable", "Weak", "Decent", "Powerful"],
+          "correctIndex": 1,
+          "explanation": "The villain lacks strong writing and depth, making the conflict less impactful.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/biker1773835152_2.jpeg"
+        },
+        {
+          "question": "HOW ARE THE ACTION SEQUENCES?",
+          "options": ["Bad", "Average", "Stylish", "High-Octane"],
+          "correctIndex": 3,
+          "explanation": "Action is the biggest strength of the film with stylish bike stunts and well-shot chase sequences.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/biker1773835152_3.jpeg"
+        },
+        {
+          "question": "HOW IS THE MUSIC & BGM?",
+          "options": ["Forgettable", "Below Average", "Decent", "Excellent"],
+          "correctIndex": 2,
+          "explanation": "Background music supports the action well, though songs are not very memorable.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/biker1773835152_6.jpeg"
+        },
+        {
+          "question": "HOW ARE THE VISUALS & CINEMATOGRAPHY?",
+          "options": ["Dull", "Okay", "Good", "Stunning"],
+          "correctIndex": 3,
+          "explanation": "Cinematography stands out with stylish visuals, especially during night rides and action scenes.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/biker1773835152_7.jpeg"
+        },
+        {
+          "question": "HOW IS THE EMOTIONAL CONNECT?",
+          "options": ["None", "Weak", "Moderate", "Strong"],
+          "correctIndex": 1,
+          "explanation": "Emotional scenes feel forced at times and don’t fully connect with the audience.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2025/11/biker1763715253_0.jpeg"
+        },
+        {
+          "question": "HOW IS THE DIRECTION?",
+          "options": ["Poor", "Average", "Good", "Excellent"],
+          "correctIndex": 2,
+          "explanation": "The director handles action well but could have improved storytelling depth.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2025/11/biker1762256352_0.jpeg"
+        },
+        {
+          "question": "HOW IS THE SECOND HALF?",
+          "options": ["Disappointing", "Below Average", "Decent", "Engaging"],
+          "correctIndex": 2,
+          "explanation": "Second half improves with better action but still follows predictable patterns.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2025/11/biker1762256352_1.jpeg"
+        },
+        {
+          "question": "HOW IS THE CLIMAX?",
+          "options": ["Weak", "Routine", "Good", "Massive"],
+          "correctIndex": 2,
+          "explanation": "Climax delivers expected action but lacks a strong emotional payoff.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/biker1773835152_4.jpeg"
+        },
+        {
+          "question": "OVERALL ENTERTAINMENT VALUE?",
+          "options": ["Boring", "Below Average", "One-Time Watch", "Highly Entertaining"],
+          "correctIndex": 2,
+          "explanation": "Biker works as a one-time watch mainly for action lovers.",
+          "image": "https://images.filmibeat.com/webp/ph-big/2026/03/biker1773835152_3.jpeg"
+        }
+      ]
+    },
     {
       "id": "social_studies",
       "title": "Global Civilizations & History",
