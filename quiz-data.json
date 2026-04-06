@@ -1,5 +1,112 @@
 {
   "quizzes": [
+
+    {
+  "id": "a_great_awakening_review",
+  "title": "A Great Awakening Movie Review",
+  "description": "A historical drama review covering story, performances, screenplay, emotional depth, and overall cinematic experience.",
+  "voiceover_start": "audio/awakening-intro.mp3",
+  "voiceover_end": "audio/outro.mp3",
+  "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/A_Great_Awakening_poster.jpg",
+  "questions": [
+    {
+      "question": "HOW IS THE STORY OF A GREAT AWAKENING?",
+      "voiceover": "audio/q1.mp3",
+      "options": ["Weak", "Average", "Engaging", "Deep & Thought-Provoking"],
+      "correctIndex": 3,
+      "explanation": "The film explores a powerful historical transformation with philosophical and emotional depth.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/A_Great_Awakening_poster.jpg"
+    },
+    {
+      "question": "HOW IS THE SCREENPLAY & PACING?",
+      "voiceover": "assets/audio/q2.mp3",
+      "options": ["Slow", "Uneven", "Decent", "Well Structured"],
+      "correctIndex": 2,
+      "explanation": "The screenplay is solid but slightly slow in parts due to heavy dialogues.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/A_Great_Awakening_poster.jpg"
+    },
+    {
+      "question": "HOW IS THE LEAD ACTOR PERFORMANCE?",
+      "voiceover": "assets/audio/q3.mp3",
+      "options": ["Average", "Good", "Very Good", "Outstanding"],
+      "correctIndex": 3,
+      "explanation": "The lead actor delivers a powerful and convincing performance throughout.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/A_Great_Awakening_poster.jpg"
+    },
+    {
+      "question": "HOW ARE THE SUPPORTING CAST PERFORMANCES?",
+      "voiceover": "assets/audio/q4.mp3",
+      "options": ["Weak", "Decent", "Good", "Excellent"],
+      "correctIndex": 2,
+      "explanation": "Supporting cast adds depth but lacks standout moments.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/A_Great_Awakening_poster.jpg"
+    },
+    {
+      "question": "HOW IS THE DIRECTION?",
+      "voiceover": "assets/audio/q5.mp3",
+      "options": ["Average", "Good", "Very Good", "Excellent"],
+      "correctIndex": 3,
+      "explanation": "Direction is strong with a clear vision and impactful storytelling.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/A_Great_Awakening_poster.jpg"
+    },
+    {
+      "question": "HOW ARE THE VISUALS & CINEMATOGRAPHY?",
+      "voiceover": "assets/audio/q6.mp3",
+      "options": ["Dull", "Average", "Good", "Beautiful & Immersive"],
+      "correctIndex": 3,
+      "explanation": "Visually rich frames capture the historical era authentically.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/A_Great_Awakening_poster.jpg"
+    },
+    {
+      "question": "HOW IS THE MUSIC & BACKGROUND SCORE?",
+      "voiceover": "assets/audio/q7.mp3",
+      "options": ["Forgettable", "Average", "Good", "Soul-Stirring"],
+      "correctIndex": 2,
+      "explanation": "Music supports the narrative well but isn’t highly memorable.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/A_Great_Awakening_poster.jpg"
+    },
+    {
+      "question": "HOW IS THE EMOTIONAL CONNECT?",
+      "voiceover": "assets/audio/q8.mp3",
+      "options": ["Weak", "Average", "Good", "Strong & Impactful"],
+      "correctIndex": 3,
+      "explanation": "Emotional moments are deeply moving and resonate well.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/A_Great_Awakening_poster.jpg"
+    },
+    {
+      "question": "HOW IS THE HISTORICAL AUTHENTICITY?",
+      "voiceover": "assets/audio/q9.mp3",
+      "options": ["Poor", "Average", "Good", "Highly Authentic"],
+      "correctIndex": 2,
+      "explanation": "The film maintains decent accuracy with some dramatization.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/A_Great_Awakening_poster.jpg"
+    },
+    {
+      "question": "HOW IS THE CLIMAX?",
+      "voiceover": "assets/audio/q10.mp3",
+      "options": ["Weak", "Good", "Very Good", "Powerful & Memorable"],
+      "correctIndex": 2,
+      "explanation": "Climax is satisfying but not extremely impactful.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/A_Great_Awakening_poster.jpg"
+    },
+    {
+      "question": "HOW IS THE DIALOGUE WRITING?",
+      "voiceover": "assets/audio/q11.mp3",
+      "options": ["Weak", "Average", "Good", "Thought-Provoking"],
+      "correctIndex": 3,
+      "explanation": "Dialogues are meaningful and reflect philosophical depth.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/A_Great_Awakening_poster.jpg"
+    },
+    {
+      "question": "OVERALL ENTERTAINMENT VALUE?",
+      "voiceover": "assets/audio/q12.mp3",
+      "options": ["Below Average", "Average", "Good", "Critically Acclaimed"],
+      "correctIndex": 2,
+      "explanation": "A strong content-driven film that appeals more to serious cinema lovers.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/A_Great_Awakening_poster.jpg"
+    }
+  ]
+},
     
     {
       "id": "dhurandhar2_review",
